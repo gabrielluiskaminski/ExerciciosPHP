@@ -1,6 +1,6 @@
 <?php
     $hora = readline("Digite a hora atual utilizando ponto ao invés de dois pontos: ");
-    $minutosQuebrados = fmod ($hora, 1);
+    $minutosQuebrados = ($hora - (int) $hora) * 100;
     $minutos = (int) $hora;
     $minutos = $minutos * 60;
     $minutos = $minutos + $minutosQuebrados;
